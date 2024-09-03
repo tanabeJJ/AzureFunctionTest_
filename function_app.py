@@ -55,4 +55,7 @@ def timer_trigger1(myTimer: func.TimerRequest) -> None:
     if myTimer.past_due:
         logging.info('The timer is past due!')
     logging.info('Python timer trigger function executed.')
-    return "abc"
+    return func.HttpResponse(
+            "実行完了",
+            status_code=200
+    )
