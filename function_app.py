@@ -46,3 +46,12 @@ def http_trigger3(req: func.HttpRequest) -> func.HttpResponse:
              status_code=200
         )
 
+
+
+@app.timer_trigger(schedule="", arg_name="myTimer", run_on_startup=True,
+              use_monitor=False) 
+def timer_trigger1(myTimer: func.TimerRequest) -> None:
+    print(123)
+    if myTimer.past_due:
+        logging.info('The timer is past due!')
+    logging.info('Python timer trigger function executed.')
