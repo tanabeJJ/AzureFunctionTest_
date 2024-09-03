@@ -70,7 +70,7 @@ def timer_trigger3(myTimer: func.TimerRequest) -> None:
     logging.info('Python timer trigger function executed.')
     import pandas as pd
     # Create sample 
-    datadata = {
+    data = {
         'Name': ['Taro', 'Hanako', 'Jiro'],
         'Age': [23, 25, 22],
         'City': ['Tokyo', 'Osaka', 'Nagoya']
@@ -78,4 +78,4 @@ def timer_trigger3(myTimer: func.TimerRequest) -> None:
     # Create DataFrame
     df = pd.DataFrame(data)
     # Display DataFrame
-    print(df)
+    logging.info(df)
