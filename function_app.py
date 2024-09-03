@@ -1,5 +1,6 @@
 import azure.functions as func
 import logging
+import pandas as pd
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
@@ -68,7 +69,7 @@ def timer_trigger3(myTimer: func.TimerRequest) -> None:
         logging.info('The timer is past due!')
 
     logging.info('Python timer trigger function executed.')
-    import pandas as pd
+
     # Create sample 
     data = {
         'Name': ['Taro', 'Hanako', 'Jiro'],
